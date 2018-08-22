@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
+		<title>how to encode video using intel vaapi - sarifria</title>
+		<meta name="description" content="how to encode video using intel vaapi">
+		<meta name="keywords" content="html5, web, page, navigation">
+		<meta name="author" content="Seirra Saffron Francis Diamond Blake">
+		<link rel="stylesheet" href="STYLE.CSS">
+</head>
+	<body>
+	<header><a href="navigation.htm"><nav></nav></a>
+<h1 aria->how to encode video using intel vaapi</h1>
+</header>
+	<main>
+	    <p>
+	        <ol>
+	            <li>open up your terminal</li>
+	            <li>wget http://repository.mein-neues-blog.de:9000/PublicKey</li>
+	            <li>sudo apt-key add PublicKey && rm -rf PublicKey</li>
+	            <li>echo "deb http://repository.mein-neues-blog.de:9000/ /" | sudo tee -a /etc/apt/sources.list</li>
+	            <li>sudo <a href="install.htm">aptitude</a> update</li>
+	            <li>sudo <a href="install.htm">aptitude</a> install tragtor</li>
+	            <li>open tragtor</li>
+	            <li>choose your input file or files</li>
+	            <li>click on format</li>
+	            <li>under video settings click force codec</li>
+	            <li>choose your vaapi enabled codec (depending on hardware not all options may be usable), h264_vaapi is a good all rounder, and the one that was tested for this guide</li>
+	            <li>in additional options under render settings type in -vaapi_device /dev/dri/renderD128 -vf "format=nv12,hwupload"</li>
+	            <li>you're now ready to click proceed</li>
+	            <li>change the options as required and click show me the light!</li>
+	            <li>click apply, the quoted duration is incorrect, it will probably be much quicker</li>
+	        </ol>
+	    </p>
+	    <p><a href="http://linuxg.net/how-to-install-tragtor-gui-for-ffmpeg-on-ubuntu-linux-mint-and-debian/">[source]</a><a href="http://www.ffmpeg-archive.org/H264-VAAPI-Encoder-td4676054.html">[source]</a></p>
+	</main>
+	<footer></footer>
+	</body>
+</html>
