@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
+		<title>troubleshooting - sarifria</title>
+		<meta name="description" content="sarifria home page">
+		<meta name="keywords" content="html5, web, page, navigation">
+		<meta name="author" content="Seirra Saffron Francis Diamond Blake">
+		<link rel="stylesheet" href="STYLE.CSS">
+</head>
+	<body>
+	<header><a href="navigation.htm"><nav></nav></a>
+<h1 aria->Troubleshooting</h1>
+</header>
+	<main>
+<h2>ubuntu or similar installation</h2>
+<h3>installation hangs</h3>
+<p>did you enable download updates or third party software? disable these. even with a connection it can hang.[personal experience]</p>
+<h3>installation hangs at force efi message</h3>
+<p>manually create the partitions; however rather than creating an efi partition make an fat32 partition. continue as normal then when it warns about efi click go back and change the fat32 partition to efi.<a href="https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1547286">[source]</a>[personal experience]</p>
+<h3>package has unmet dependencies</h3>
+<p>firstly, try installing it through aptitude, it can come up with various solutions. if that doesn't work, try repackaging the package (it could just be set not to accept anything above the original version).</p>
+<ol>
+<li>mkdir tmp</li>
+<li>dpkg-deb -R /path/to/.deb tmp</li>
+<li>edit tmp/DEBIAN/control as required</li>
+<li>dpkg-deb -b tmp /path/to/edited.deb</li>
+</ol>
+<h2>checking reverse dependencies of a package</h2>
+<p>this is simple, just use apt-cache rdepends [package-name]. for only installed dependencies add --installed to the end.<a href="https://askubuntu.com/questions/13296/how-do-i-find-the-reverse-dependency-of-a-package">[source]</a></p>
+<h3>opening terminal</h3>
+<p>in ubuntu: ctrl+alt+t. in elementary os: super+t</p>	
+<h3>public key is not available</h3>
+<p>use the command for fingerprint in 8B48AD6246925553 7638D0442B90D010; do
+  curl "http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0x$fingerprint" | \awk '/-----BEGIN PGP/{p=1} /-----END PGP/{print; p=0} p==1{print}' > key.txt;
+  sudo apt-key add key.txt;
+done</p><p><a href="https://askubuntu.com/questions/308760/w-gpg-error-http-ppa-launchpad-net-precise-release-the-following-signatures/">[source]</a></p>
+<h3>setting up kinect for xbox 360</h3>
+<p>fear not, this is in fact very easy! just follow the guide below:</p>
+<ol>
+    <li>sudo aptitude install zlib1g-dev mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev git-core cmake freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libusb-1.0-0-dev doxygen graphviz mono-complete freenect python-freenect</li>
+    <li>restart your pc</li>
+    <li>freenect-glview</li>
+    <li></li>
+</ol>
+&nbsp;</main>
+	<footer></footer>
+	</body>
+</html>
