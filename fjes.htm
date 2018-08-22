@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
+		<title>unknown module fjes.ko is loaded - sarifria</title>
+		<meta name="description" content="unknown module fjes.ko is loaded">
+		<meta name="keywords" content="html5, web, page, navigation">
+		<meta name="author" content="Seirra Saffron Francis Diamond Blake">
+		<link rel="stylesheet" href="STYLE.CSS">
+</head>
+	<body>
+	<header><a href="navigation.htm"><nav></nav></a>
+<h1 aria->unknown module fjes.ko is loaded</h1>
+</header>
+	<main>
+	    <p>
+	        <ol>
+	            <li>are you running a fujitsu server? if you are this not an issue. if you aren't you do not need it, and you may remove it from your kernel to improve performance.</li>
+	            <li>open up your terminal</li>
+	            <li>cd /usr/src/linux/</li>
+	            <li>make menuconfig</li>
+	            <li>go to Device Drivers/Network device support/FUJITSU Extended Socket Network Device driver</li>
+	            <li>press n</li>
+	            <li>do the following key combination without the lines:|right|right|right|enter|enter|enter|double esc|</li>
+	            <li>sudo make</li>
+	            <li>sudo make modules_install</li>
+	            <li>mount [boot] /boot where [boot] is your boot partition/directory</li>
+	            <li>sudo make install</li>
+	            <li>grub-mkconfig -o /boot/grub/grub.cfg</li>
+	        </ol>
+	    </p>
+	    	    <p><a href="https://lists.debian.org/debian-user/2017/01/msg00833.html">[source]</a><a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Bootloader">[source]</a></p>
+	</main>
+	<footer></footer>
+	</body>
+</html>
