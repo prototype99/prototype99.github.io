@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
+		<title>recipe for target /tools/objtool/fixdep-in.o' failed - sarifria</title>
+		<meta name="description" content="recipe for target /tools/objtool/fixdep-in.o' failed">
+		<meta name="keywords" content="html5, web, page, navigation">
+		<meta name="author" content="Seirra Saffron Francis Diamond Blake">
+		<link rel="stylesheet" href="STYLE.CSS">
+</head>
+	<body>
+	<header><a href="navigation.htm"><nav></nav></a>
+<h1 aria->recipe for target /tools/objtool/fixdep-in.o' failed</h1>
+</header>
+	<main>
+	    <p>
+	        <ol>
+	            <li>do you have ccache? if you don't please inform me, it appears to be ccache specific. there are two solutions: remove ccache, or just use a different unwinder in the kernel. here we'll cover the latter.</li>
+	            <li>open up your terminal</li>
+	            <li>cd /usr/src/linux/</li>
+	            <li>make menuconfig</li>
+	            <li>go to Kernel hacking/Choose kernel unwinder</li>
+	            <li>press select a different unwinder. if the selected unwinder was not ORC please let me know</li>
+	            <li>do the following key combination without the lines:|right|right|right|enter|enter|enter|double esc|</li>
+	            <li>sudo make</li>
+	            <li>sudo make modules_install</li>
+	            <li>mount [boot] /boot where [boot] is your boot partition/directory</li>
+	            <li>sudo make install</li>
+	            <li>grub-mkconfig -o /boot/grub/grub.cfg</li>
+	        </ol>
+	    </p>
+	    	    <p><a href="https://github.com/ccache/ccache/issues/153">[source]</a></p>
+	</main>
+	<footer></footer>
+	</body>
+</html>
