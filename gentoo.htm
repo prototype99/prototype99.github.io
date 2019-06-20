@@ -18,7 +18,7 @@
 			<li>su && passwd</li>
 			<li>connect to internet</li>
 			<li>set up disk with a gpt table. add swap, then data partition (generally with sata xfs) then boot partition</li>
-			<li>swapon /dev/sda1 && mount /dev/sda2 /mnt/gentoo && cd /mnt/gentoo</li>
+			<li>swapon /dev/sda1 && mount /dev/sda2 /mnt/gentoo && mkdir /mnt/gentoo && cd /mnt/gentoo</li>
 			<li>go to https://www.gentoo.org/downloads/#other-arches and wget the correct download link</li>
 			<li>tar xpvf stage3-*.tar.bz2 --xattrs-include='*.*' --numeric-owner</li>
 			<li>rm -v -f stage3-amd64-* or reserve it as a backup</li>
