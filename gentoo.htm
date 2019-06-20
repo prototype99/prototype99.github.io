@@ -23,8 +23,7 @@
 			<li>tar xpvf stage3-*.tar.bz2 --xattrs-include='*.*' --numeric-owner</li>
 			<li>rm -v -f stage3-amd64-* or reserve it as a backup</li>
 			<li>add in the pre-install make.conf</li>
-			<li>cd ~ </li>
-          <li>sudo mount --types proc /proc /run/media/guest/CLDL-18.12/proc && sudo mount --rbind /sys /run/media/guest/CLDL-18.12/sys && sudo mount --make-rslave /run/media/guest/CLDL-18.12/sys && sudo mount --rbind /dev /run/media/guest/CLDL-18.12/dev && sudo mount --rbind /dev /run/media/guest/CLDL-18.12/dev && sudo chroot /run/media/guest/CLDL-18.12 /bin/bash && source /etc/profile && export PS1="(chroot) ${PS1}" && sudo mount /dev/sda3 /boot</li>
+			<li>cd ~ && mkdir --parents /mnt/gentoo/etc/portage/repos.conf && cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf && cp --dereference /etc/resolv.conf /mnt/gentoo/etc/ && sudo mount --types proc /proc /run/media/guest/CLDL-18.12/proc && sudo mount --rbind /sys /run/media/guest/CLDL-18.12/sys && sudo mount --make-rslave /run/media/guest/CLDL-18.12/sys && sudo mount --rbind /dev /run/media/guest/CLDL-18.12/dev && sudo mount --rbind /dev /run/media/guest/CLDL-18.12/dev && sudo chroot /run/media/guest/CLDL-18.12 /bin/bash && source /etc/profile && export PS1="(chroot) ${PS1}" && sudo mount /dev/sda3 /boot</li>
 		</ol>
 	</main>
 	<footer></footer>
