@@ -23,7 +23,7 @@
 			<li>tar xpvf stage3-*.tar.bz2 --xattrs-include='*.*' --numeric-owner</li>
 			<li>rm -v -f stage3-amd64-* or reserve it as a backup</li>
 			<li>add in the pre-install make.conf</li>
-			<li>cd ~ && mkdir --parents /mnt/gentoo/etc/portage/repos.conf && cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf && cp --dereference /etc/resolv.conf /mnt/gentoo/etc/ && sudo mount --types proc /proc /mnt/gentoo/proc && sudo mount --rbind /sys /mnt/gentoo/sys && sudo mount --make-rslave /mnt/gentoo/sys && sudo mount --rbind /dev /mnt/gentoo/dev && sudo mount --rbind /dev /mnt/gentoo/dev && sudo chroot /mnt/gentoo/bin/bash && source /etc/profile && export PS1="(chroot) ${PS1}" && sudo mount /dev/sda3 /boot && emerge-webrsync && emerge --sync && eselect news read</li>
+			<li>cd ~ && mkdir --parents /mnt/gentoo/etc/portage/repos.conf && cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf && cp --dereference /etc/resolv.conf /mnt/gentoo/etc/ && sudo mount --types proc /proc /mnt/gentoo/proc && sudo mount --rbind /sys /mnt/gentoo/sys && sudo mount --make-rslave /mnt/gentoo/sys && sudo mount --rbind /dev /mnt/gentoo/dev && sudo mount --rbind /dev /mnt/gentoo/dev && sudo chroot /mnt/gentoo /bin/bash && source /etc/profile && export PS1="(chroot) ${PS1}" && sudo mount /dev/sda3 /boot && emerge-webrsync && emerge --sync && eselect news read</li>
 			<li>eselect profile list</li>
 			<li>eselect profile set the appropriate profile</li>
 			<li>emerge sys-kernel/genkernel-next --ask --verbose --update --deep --newuse @world && ln -sf /proc/self/mounts /etc/mtab</li>
