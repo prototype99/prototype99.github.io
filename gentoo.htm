@@ -24,7 +24,7 @@
 			<li>sudo tar xpvf *.tar.bz2 --xattrs-include='*.*' --numeric-owner</li>
 			<li>rm -v -f stage3* or reserve it as a backup</li>
 		</ol>
-			<p>10. add in the pre-install make.conf</p>
+			<p>10. sudo git clone https://github.com/prototype99/prototype99.git</p>
 			<p>11. cd ~ && mkdir --parents /mnt/gentoo/etc/portage/repos.conf && cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf && cp --dereference /etc/resolv.conf /mnt/gentoo/etc/ && sudo mount --types proc /proc /mnt/gentoo/proc && sudo mount --rbind /sys /mnt/gentoo/sys && sudo mount --make-rslave /mnt/gentoo/sys && sudo mount --rbind /dev /mnt/gentoo/dev && sudo mount --rbind /dev /mnt/gentoo/dev && sudo chroot /mnt/gentoo /bin/bash && source /etc/profile && export PS1="(chroot) ${PS1}" && sudo mount /dev/sda2 /boot && emerge-webrsync && emerge --sync && eselect news read</p>
 			<p>12. eselect profile list</p>
 			<p>13. eselect profile set the appropriate profile</p>
