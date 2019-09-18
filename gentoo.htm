@@ -21,7 +21,7 @@
 			<li>sudo swapon /dev/sd[*]1 && sudo mkdir /mnt/gentoo && sudo mount /dev/sd[*]3 /mnt/gentoo && cd /mnt/gentoo where [*] is the drive letter</li>
 			<li><a href="https://www.gentoo.org/downloads/#other-arches">find the correct download link</a></li>
 			<li>curl [url] -o stage3.tar.bz2 where [url] is the download link</li>
-			<li>tar xpvf *.tar.bz2 --xattrs-include='*.*' --numeric-owner</li>
+			<li>sudo tar xpvf *.tar.bz2 --xattrs-include='*.*' --numeric-owner</li>
 			<li>rm -v -f stage3* or reserve it as a backup</li>
 		</ol>
 			<p>10. add in the pre-install make.conf</p>
