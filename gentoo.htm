@@ -18,13 +18,13 @@
 			<li>su && passwd</li>
 			<li>connect to internet</li>
 			<li>set up disk with a gpt table. add swap, then boot partition, then data partition (generally with sata xfs). you may also label and name these partitions, it does make things easier. if you aren't using efi you also need a 1 mib bios_grub partition</li>
-			<li>sudo swapon /dev/sd[*]1 && sudo mkdir /mnt/gentoo && sudo mount /dev/sd[*]2 /mnt/gentoo && cd /mnt/gentoo where [*] is the drive letter</li>
+			<li>sudo swapon /dev/sd[*]1 && sudo mkdir /mnt/gentoo && sudo mount /dev/sd[*]3 /mnt/gentoo && cd /mnt/gentoo where [*] is the drive letter</li>
 			<li>go to https://www.gentoo.org/downloads/#other-arches and wget the correct download link</li>
 			<li>tar xpvf stage3-*.tar.bz2 --xattrs-include='*.*' --numeric-owner</li>
 			<li>rm -v -f stage3-amd64-* or reserve it as a backup</li>
 			<li>add in the pre-install make.conf</li>
 		</ol>
-			<p>10. cd ~ && mkdir --parents /mnt/gentoo/etc/portage/repos.conf && cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf && cp --dereference /etc/resolv.conf /mnt/gentoo/etc/ && sudo mount --types proc /proc /mnt/gentoo/proc && sudo mount --rbind /sys /mnt/gentoo/sys && sudo mount --make-rslave /mnt/gentoo/sys && sudo mount --rbind /dev /mnt/gentoo/dev && sudo mount --rbind /dev /mnt/gentoo/dev && sudo chroot /mnt/gentoo /bin/bash && source /etc/profile && export PS1="(chroot) ${PS1}" && sudo mount /dev/sda3 /boot && emerge-webrsync && emerge --sync && eselect news read</p>
+			<p>10. cd ~ && mkdir --parents /mnt/gentoo/etc/portage/repos.conf && cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf && cp --dereference /etc/resolv.conf /mnt/gentoo/etc/ && sudo mount --types proc /proc /mnt/gentoo/proc && sudo mount --rbind /sys /mnt/gentoo/sys && sudo mount --make-rslave /mnt/gentoo/sys && sudo mount --rbind /dev /mnt/gentoo/dev && sudo mount --rbind /dev /mnt/gentoo/dev && sudo chroot /mnt/gentoo /bin/bash && source /etc/profile && export PS1="(chroot) ${PS1}" && sudo mount /dev/sda2 /boot && emerge-webrsync && emerge --sync && eselect news read</p>
 			<p>11. eselect profile list</p>
 			<p>12. eselect profile set the appropriate profile</p>
 			<p>13. emerge dev-perl/XML-Parser sys-kernel/genkernel-next --ask --verbose --update --deep --newuse @world && ln -sf /proc/self/mounts /etc/mtab && genkernel kernel</p>
